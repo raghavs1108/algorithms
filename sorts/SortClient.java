@@ -31,6 +31,20 @@ public class SortClient {
 		QuickSort s4 = new QuickSort();
 		s4.sort(a4);
 		print(a4);
+
+		int []a5 = {4, 7, 1, 3, 9, 8, 12, 0, 45, 18, 22, 2};
+
+		System.out.println("INSERTION SORT:");
+		InsertionSort s5 = new InsertionSort();
+		s5.sort(a5);
+		print(a5);
+
+		int []a6 = {4, 7, 1, 3, 9, 8, 12, 0, 45, 18, 22, 2};
+
+		System.out.println("COMPARISON SORT:");
+		ComparisonSort s6 = new ComparisonSort();
+		int [] s = s6.sort(a6);
+		print(s);
 		
 	}
 
