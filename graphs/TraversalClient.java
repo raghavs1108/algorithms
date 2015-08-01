@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 public class TraversalClient {
@@ -9,13 +10,10 @@ public class TraversalClient {
 		G.addVertex(3);
 		G.addVertex(4);
 		G.addVertex(5);
-		G.addVertex(6);
 
 		G.addEdge(1, 2);
 		G.addEdge(1, 3);
-		G.addEdge(2, 3);
-		G.addEdge(2, 5);
-		G.addEdge(2, 6);
+		G.addEdge(2, 4);
 		G.addEdge(3, 4);
 		G.addEdge(4, 5);
 		
@@ -26,11 +24,18 @@ public class TraversalClient {
 		// G.printAllEdges();
 
 
-		BFS b = new BFS();
-		b.traverse(G);
+		/*BFS b = new BFS();
+		b.traverse(G);*/
 		System.out.println("\n");
 
-		DFS d = new DFS();
-		d.traverse(G);
+		/*DFS d = new DFS();
+		d.traverse(G);*/
+
+		TopologicalSort t = new TopologicalSort();
+		List<Integer> visited = t.traverse(G);
+		
+		for (int i = 0; i < visited.size(); i++){
+			System.out.print(visited.get(i) + "  ");
+		}
 	}
 }
